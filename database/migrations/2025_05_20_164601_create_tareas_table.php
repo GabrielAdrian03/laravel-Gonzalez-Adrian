@@ -11,14 +11,13 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('tareas', function (Blueprint $table) {
-            $table->id();
-            $table->string('titulo');
-            $table->boolean('completada')->default(false);
-            $table->timestamps();
-        });
+    Schema::create('tareas', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre'); // ✅ ESTA LÍNEA ES CLAVE
+        $table->timestamps();
+});
     }
 
     /**
@@ -26,7 +25,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('tareas');
     }
