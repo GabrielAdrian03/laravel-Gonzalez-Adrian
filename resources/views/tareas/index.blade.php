@@ -5,10 +5,10 @@
         <div class="col-md-8"> 
             <div class="card"> 
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <span>{{ __('Dashboard') }}</span>
+                    <span>{{ __('Tablero de Arriba') }}</span>
                     <a href="{{ route('tareas.create') }}" class="btn btn-primary btn-sm">Crear Tarea</a>
                 </div>
-                <div class="card-header">{{__('Dashboard') }}</div> 
+                <div class="card-header">{{__('Tablero de Abajo') }}</div> 
                 <div class="card-body"> 
                     @if (session('status')) 
                         <div class="alert alert-success" role="alert"> 
